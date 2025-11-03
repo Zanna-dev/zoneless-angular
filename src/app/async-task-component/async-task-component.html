@@ -1,1 +1,13 @@
-<p>async-task-component works!</p>
+<br>
+<hr>
+<div class="card p-5">
+  <h2>Async Task Example</h2>
+  <p>{{ message() }}</p>
+  <button (click)="fetchData()">Fetch Data</button>
+</div>
+
+<h2>Second Scenario</h2>
+<pre>{{ data() | json }}</pre>
+
+<h2>Third Scenario</h2>
+<pre>{{ posts$ | json }}</pre>
