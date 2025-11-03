@@ -1,12 +1,22 @@
 <br>
 <hr>
 <div align="center">
+    <h2>Click Handler — property vs Signal</h2>
     <h2>Counter Example</h2>
     <p>Count: {{ count() }}</p>
-    <div >
+    <div>
         <button (click)="increment()" class="m-2 btn btn-primary">Increment</button>
         <button (click)="decrement()" class="m-2 btn btn-success">Decrement</button>
         <button (click)="reset()" class="m-2 btn btn-danger">Reset</button>
+    </div>
+    <hr>
+
+    <div>
+        <h3>Plain property (non-signal)</h3>
+        <p>countProp: {{ counterProp }}</p>
+        <button (click)="increment()" (click)="increment()" class="m-2 btn btn-primary">Increment Prop</button>
+        <small>In Zone.js this updates the view; in zoneless it also updates if event binding occurs (click) — but
+            Signals are recommended.</small>
     </div>
 
 </div>

@@ -12,11 +12,11 @@ import { Observable } from 'rxjs';
   styleUrl: './async-task-component.scss',
 })
 export class AsyncTaskComponent {
-  // secondScenario
+  // Scenario two
   private http = inject(HttpClient);
   data = toSignal(this.http.get<any[]>('https://jsonplaceholder.typicode.com/posts'));
 
-// Third scenario
+// scenario three
   //  The $ suffix convention means "this is an Observable"
   posts$: Observable<any> = this.http.get('https://jsonplaceholder.typicode.com/posts');
 

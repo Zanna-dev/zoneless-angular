@@ -8,7 +8,7 @@ import { Component, signal } from '@angular/core';
 })
 export class CounterComponent {
 
-  counter = 0; //Old way of doing it
+  counterProp = 0; //Old way of doing it
 
   count = signal(0); //Using Signals for Change Detection
 
