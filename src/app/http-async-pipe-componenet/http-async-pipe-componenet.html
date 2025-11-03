@@ -1,0 +1,11 @@
+<div>
+    <h2>HTTP with async pipe & toSignal()</h2>
+
+    <h3>Async pipe (works in zoneless)</h3>
+    <pre>{{ posts$ | async | json }}</pre>
+
+    <h3>toSignal() (recommended)</h3>
+    <pre>{{ postsSignal() | json }}</pre>
+
+    <button (click)="refresh()">Refresh</button>
+</div>

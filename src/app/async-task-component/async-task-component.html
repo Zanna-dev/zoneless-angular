@@ -1,5 +1,12 @@
 <br>
 <hr>
+<h2>First Scenario</h2>
+<div class="card p-5">
+  {{ count }}  <!-- Property -->
+  <button (click)="count = count + 1">Update</button>
+  <h1>{{ counter() }}</h1> <!-- Signal - a better way to update data -->
+</div>
+
 <div class="card p-5">
   <h2>Async Task Example</h2>
   <p>{{ message() }}</p>
@@ -7,7 +14,25 @@
 </div>
 
 <h2>Second Scenario</h2>
-<pre>{{ data() | json }}</pre>
+<div class="card p-5">
+  <h2>HTTP with subscribe() (Antipattern in zoneless)</h2>
+  <p><em>Note:</em> In zoneless mode a manual subscribe that sets a plain property will not trigger CD automatically.
+  </p>
+  <button (click)="load()">Load (subscribe)</button>
+  <pre>{{ data | json }}</pre>
+</div>
+
 
 <h2>Third Scenario</h2>
 <pre>{{ posts$ | json }}</pre>
+
+<!-- Sixth scenario -->
+<h2>Sixth Scenario</h2>
+<!-- <pre>{{ data2 | json }}</pre> -->
+<pre>{{ data2() | json }}</pre>
+
+
+<!-- Seventh scenario -->
+<h2>Seventh Scenario</h2>
+<!-- <app-scenario-child-component [data3]="data3()"></app-scenario-child-component> -->
+<button (click)="updateData2()">Update</button>
