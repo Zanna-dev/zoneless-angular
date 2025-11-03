@@ -52,24 +52,18 @@ export class AsyncTaskComponent {
   }
 
 
-  // Fifth scenario
-    count = signal(0);
-
-  increment() {
-    this.count.update(c => c + 1);
-  }
 
 
   // Sixth scenario
+
   // data2: any;
-
   // constructor(private cdRef: ChangeDetectorRef) {}
-
   // updateData(newValue: any) {
     // this.data = newValue;
     // this.cdRef.markForCheck();
     //  manually tell Angular to re-check
   // }
+
    data2 = signal<any>(null);
 
     updateData(newValue: any) {
@@ -81,11 +75,13 @@ export class AsyncTaskComponent {
   }
 
   // Seventh scenario
-  data3 = signal({ name: 'Initial Data' });
+  data3 = signal({ name: 'Main Data' });
 
   updateData2() {
     this.data3.set({ name: 'Updated Data' });
+    
   }
+  
 
 
 }

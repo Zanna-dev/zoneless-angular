@@ -1,1 +1,17 @@
-<p>manual-change-component works!</p>
+
+<!-- Scenario four -->
+<h2>Timer Demo</h2>
+
+      <div>
+        <h4>Non-signal setInterval (antipattern)</h4>
+        <p>countRaw: {{ countRaw }}</p>
+        <button (click)="startRaw()">Start raw interval</button>
+      </div>
+
+      <hr/>
+
+      <div>
+        <h4>Signal-based timer (recommended)</h4>
+        <p>countSignal: {{ countSignal() }}</p>
+        <button (click)="startSignal()">Start signal interval</button>
+      </div>
